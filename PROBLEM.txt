@@ -1,0 +1,20 @@
+1.
+#error with link
+ld: cannot open linker script file linker_script.ld: No such file or directory
+
+C:\Users\HIDEN\Downloads\HIDEN\build>ld -o kernel.bin -T linker.ld kernel.o video.o window.o
+ld: kernel.o:kernel.c:(.text+0x5e): undefined reference to `init_keyboard'
+kernel.o:kernel.c:(.pdata+0x0): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.text'
+kernel.o:kernel.c:(.pdata+0x4): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.text'
+kernel.o:kernel.c:(.pdata+0x8): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.xdata'
+kernel.o:kernel.c:(.pdata+0xc): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.text'
+kernel.o:kernel.c:(.pdata+0x10): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.text'
+kernel.o:kernel.c:(.pdata+0x14): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.xdata'
+video.o:video.c:(.pdata+0x0): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.text'
+video.o:video.c:(.pdata+0x4): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.text'
+video.o:video.c:(.pdata+0x8): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.xdata'
+video.o:video.c:(.pdata+0xc): relocation truncated to fit: IMAGE_REL_AMD64_ADDR32NB against `.text'
+video.o:video.c:(.pdata+0x10): additional relocation overflows omitted from the output
+ld: window.o:window.c:(.text+0x3e): undefined reference to `draw_pixel'
+ld: window.o:window.c:(.text+0x86): undefined reference to `malloc'
+
